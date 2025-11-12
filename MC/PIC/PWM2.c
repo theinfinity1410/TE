@@ -17,6 +17,7 @@ void setPWM(unsigned int per){
 	lsb2 = 0;
 	if(per == 20) pwm = 0x25;
 	if(per == 40) pwm = 0x4B;
+	if(per == 50) pwm = 0x5D;
 	if(per == 60) pwm = 0x70;
 	if(per == 80) pwm = 0x96;
 	msdelay(2000);
