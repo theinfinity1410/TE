@@ -3,14 +3,14 @@
 
 #define lrbit PORTBbits.RB1
 #define rlbit PORTBbits.RB0
-#define buzzer PORTCbits.RC2
+#define buzzer PORTCbits.RC2        
 #define relay PORTDbits.RD7
 
 void msdelay(unsigned int time);
 
 void main() {
     unsigned char i, val = 0;
-    INTCON2bits.RBPU = 0;
+    INTCON2bits.RBPU = 0;   
     ADCON1 = 0x0F;
     TRISBbits.RB0 = 1;
     TRISBbits.RB1 = 1;
@@ -38,7 +38,7 @@ void main() {
             }
         }
         if (val == 2) {
-            buzzer = 0;
+            buzzer = 0; 
             relay = 0;
             PORTA = 0x01;
             msdelay(50);

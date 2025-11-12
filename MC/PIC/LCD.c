@@ -10,7 +10,7 @@
 void init_LCD(void);
 void LCD_command(unsigned char cmd);
 void LCD_data(unsigned char data);
-void LCD_write_string(static char *str);
+void LCD_write_string(char *str);
 void msdelay(unsigned int time);
 void main(void) {
     char var1[] = "PICT";
@@ -60,7 +60,7 @@ void LCD_data(unsigned char data) {
     en = 0;
 }
 
-void LCD_write_string(static char *str) {
+void LCD_write_string(char *str) {
     int i = 0;
     while (str[i] != 0) {
         LCD_data(str[i]);
